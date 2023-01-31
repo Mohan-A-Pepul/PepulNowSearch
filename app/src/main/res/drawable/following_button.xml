@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="103"
+    android:viewportHeight="34" android:shape="rectangle">
+  <solid android:color="@color/following_blue"/>
+  <stroke android:color="@color/mediumblue" android:width="@dimen/_1sdp" />
+  <corners android:radius="@dimen/_7sdp" />
+</shape>

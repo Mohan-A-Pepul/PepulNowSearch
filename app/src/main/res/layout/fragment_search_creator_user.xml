@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackblue"
+    tools:context=".main.ui.view.activity.MainActivity">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:indeterminate="true"
+        android:maxHeight="20dip"
+        android:minHeight="0dip"
+        android:visibility="gone"
+        app:indicatorColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_creator_list"
+        app:trackThickness="0.9px"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <ImageView
+        android:id="@+id/iv_left_arrow"
+        android:layout_width="@dimen/_19sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <TextView
+        android:id="@+id/tv_search_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/avenirnext_bold"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_left_arrow"
+        app:layout_constraintStart_toEndOf="@+id/iv_left_arrow"
+        app:layout_constraintTop_toTopOf="@+id/iv_left_arrow"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/ev_search_name_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/search_back_text"
+        android:drawablePadding="@dimen/_4sdp"
+        android:fontFamily="@font/avenir_next_medium"
+        android:foregroundGravity="center"
+        android:gravity="left|center"
+        android:paddingStart="@dimen/_49sdp"
+        android:singleLine="true"
+        android:text="@string/search_by_name"
+        android:textColor="@color/LightGrey"
+        android:textColorHighlight="#00000000"
+        android:textSize="16sp"
+        android:windowSoftInputMode="stateHidden|adjustResize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_search_title" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_creator_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@color/blackblue"
+        android:elevation="@dimen/_1sdp"
+        android:outlineProvider="none"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ev_search_name_filter"
+        app:layout_constraintTop_toBottomOf="@+id/ev_search_name_filter"
+        app:tabBackground="@drawable/creators_tab_indicator"
+        app:tabGravity="center"
+        app:tabIndicator="@color/transpa"
+        app:tabIndicatorColor="@color/transpa"
+        app:tabIndicatorFullWidth="false"
+        app:tabInlineLabel="true"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextAppearance="@style/TabWidgets2"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/TabWidget"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_frame_view_page"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_search"
+        app:navGraph="@navigation/search_viewpager_nav_graph" />
+
+    <View
+        android:id="@+id/view_line_search"
+        android:layout_width="match_parent"
+        android:layout_height="0.1pt"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@color/LightSlateGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_creator_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

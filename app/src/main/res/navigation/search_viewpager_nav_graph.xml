@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_nav_graph"
+    app:startDestination="@id/creatorsFragment">
+
+    <fragment
+        android:id="@+id/creatorsFragment"
+        android:name="com.example.pepulnowsearch.main.ui.view.fragment.CreatorsFragment"
+        android:label="fragment_creators"
+        tools:layout="@layout/fragment_creators" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.pepulnowsearch.main.ui.view.fragment.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" />
+    <fragment
+        android:id="@+id/photoStoriesFragment"
+        android:name="com.example.pepulnowsearch.main.ui.view.fragment.PhotoStoriesFragment"
+        android:label="fragment_photo_stories"
+        tools:layout="@layout/fragment_photo_stories" />
+    <fragment
+        android:id="@+id/videoStoriesFragment"
+        android:name="com.example.pepulnowsearch.main.ui.view.fragment.VideoStoriesFragment"
+        android:label="fragment_video_stories"
+        tools:layout="@layout/fragment_video_stories" />
+</navigation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_20sdp"
+    android:background="@drawable/tab_background_selected"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tab_creator_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:maxWidth="@dimen/_68sdp"
+        android:singleLine="true"
+        android:text="@string/creator"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/badge_logo_select"
+        android:layout_width="@dimen/_9sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:src="@drawable/logos_badge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tab_creator_title"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

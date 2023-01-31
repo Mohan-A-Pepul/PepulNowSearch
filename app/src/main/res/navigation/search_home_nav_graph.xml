@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/searchCreatorUserFragment"
+    app:startDestination="@id/searchCreatorUserFragment2">
+
+    <fragment
+        android:id="@+id/searchCreatorUserFragment2"
+        android:name="com.example.pepulnowsearch.main.ui.view.fragment.SearchCreatorUserFragment"
+        android:label="SearchCreatorUserFragment">
+        <action
+            android:id="@+id/action_searchCreatorUserFragment2_to_filterSearchCreatorFragment"
+            app:destination="@id/filterSearchCreatorFragment"
+            app:popUpTo="@id/filterSearchCreatorFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterSearchCreatorFragment"
+        android:name="com.example.pepulnowsearch.main.ui.view.fragment.FilterSearchCreatorFragment"
+        android:label="fragment_filter_search_creator"
+        tools:layout="@layout/fragment_filter_search_creator" >
+        <action
+            android:id="@+id/action_filterSearchCreatorFragment_to_searchCreatorUserFragment2"
+            app:destination="@id/searchCreatorUserFragment2"
+            app:popUpTo="@id/searchCreatorUserFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
